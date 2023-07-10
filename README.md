@@ -1,6 +1,6 @@
 # ClassicalAlgorithmsWithJava
 A repository dedicated to some of the classical and most common algorithms implemented with the Java programming  languages.
 
-Please, feel free to take and copy any content of the any any Java file contained within this Respository in function of your own needs...
+Please, feel free to take, copy, and use any content of any Java file existing within this Respository, in function of your own needs of course...
 
-Peace!
+ A big digital sincere Peace sign  !
