@@ -11,8 +11,8 @@
 public class InsertionSort {
 	/**
 	 * 
-	 * Sorting all the (integers) elements contained within an input array with the Insertion Sort 
-	 * algorithm 
+	 * Sorting all the (integers) elements contained within an input array following an ascending order with the <b>Insertion Sort</b> 
+	 * algorithm (Numerical-Ascending order)
 	 * @param unsortedArray The (input) array whose elements are to be sorted
 	 * @return A sorted version of the unsorted array provided as a parameter (as an input)
 	 */
@@ -38,5 +38,4 @@ public class InsertionSort {
 		// the array is now sorted
 		return result;
 	}
-
 }
