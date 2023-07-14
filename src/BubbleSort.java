@@ -1,7 +1,11 @@
 /**
  * 
  * @author Rindra Mbolamananamalala
- * a.k.a : "Sinking Sort" algorithm 
+ * The class dedicated to the Bubble Sort Algorithm implementation, a.k.a : the "Sinking Sort" algorithm.
+ * "The bubbles are to me moved to the top of the water surface": 
+ *  Here, a "Bubble" is considered as an element with a higher value, therefore, it should be put at the end of the 
+ *  Collection.
+ *  1) Iterating over the Array whose elements are to be sorted.  
  */
 
 public class BubbleSort {
@@ -9,8 +13,10 @@ public class BubbleSort {
 		// Preparations of the result to return (the sorted array)
 		int []result = unsortedArray;
 		int dimension = unsortedArray.length;
-		int swappingEventTemporaryVar;
 		
+		// The variable responsible for the determination of whether or not a permutation of element
+		// has still occurred
+		int swappingEventTemporaryVar;
 		boolean doesASwappingEventStillOccur = false;
 		do {
 			doesASwappingEventStillOccur = false;
