@@ -8,14 +8,15 @@
  *  1) Iterating over the Array whose elements are to be sorted;  
  *  2) If a "Bubble" element is found, moving the latter to the "end" of the collection.
  */
-public class BubbleSort {
+public class BubbleSort implements ISortingAlgorithm {
 	/**
 	 * Sorting all the (integers) elements contained within an input array following an ascending order with the <b>Bubble Sort</b> 
 	 * algorithm (Numerical-Ascending order)
 	 * @param unsortedArray The (input) array whose elements are to be sorted
 	 * @return A sorted version of the unsorted array provided as a parameter (as an input)
 	 */
-	public static int []sort(int []unsortedArray) {
+	@Override
+	public int []sort(int []unsortedArray) {
 		// Preparations of the result to return (the sorted array)
 		int []result = unsortedArray;
 		int dimension = unsortedArray.length;

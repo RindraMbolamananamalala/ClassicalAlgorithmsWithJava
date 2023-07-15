@@ -1,4 +1,3 @@
-
 /**
  * 
  * @author Rindra Mbolamananamalala
@@ -8,7 +7,7 @@
  * 		- If the Key is lower than its Predecessor, compare it to the predecessor' s predecessors;
  * 		- Move greater elements one position up to make space for the swapped element. 
  */
-public class InsertionSort {
+public class InsertionSort implements ISortingAlgorithm{
 	/**
 	 * 
 	 * Sorting all the (integers) elements contained within an input array following an ascending order with the <b>Insertion Sort</b> 
@@ -16,7 +15,8 @@ public class InsertionSort {
 	 * @param unsortedArray The (input) array whose elements are to be sorted
 	 * @return A sorted version of the unsorted array provided as a parameter (as an input)
 	 */
-	public static int []sort(int []unsortedArray) {
+	@Override
+	public int []sort(int []unsortedArray) {
 		// Preparations of the result to return (the sorted array)
 		int []result = unsortedArray;
 		int arrayDimension = result.length;
