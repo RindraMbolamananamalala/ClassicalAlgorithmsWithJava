@@ -1,3 +1,5 @@
+import exceptions.SortingException;
+
 /**
  * 
  * @author Rindra Mbolamananamalala
@@ -14,33 +16,40 @@ public class BubbleSort implements ISortingAlgorithm {
 	 * algorithm (Numerical-Ascending order)
 	 * @param unsortedArray The (input) array whose elements are to be sorted
 	 * @return A sorted version of the unsorted array provided as a parameter (as an input)
+	 * @throws SortingException When an Exception event happens when using the current Sorting Algorithm, 
+	 * we let the dedicated class handle it 
 	 */
 	@Override
-	public int []sort(int []unsortedArray) {
-		// Preparations of the result to return (the sorted array)
-		int []result = unsortedArray;
-		int dimension = unsortedArray.length;
-		
-		// The variable responsible for the determination of whether or not a permutation of element
-		// has still occurred, initialized with the value FALSE
-		boolean doesASwappingEventStillOccur = false;
-		// A particular variable necessary for the permutation of elements
-		int swappingEventTemporaryVar;
-		// Iterating over the Array which elements are to be sorted, and moving the "Bubble" element up 
-		// if one is found
-		do {
-			doesASwappingEventStillOccur = false;
-			for(int i = 1; i != dimension; ++i) {
-				if(result[i] < result[i - 1]) {
-					// the actual permutation
-					swappingEventTemporaryVar = result[i];
-					result[i] = result[i - 1];
-					result[i - 1] = swappingEventTemporaryVar;
-					// so, a permutation has actually occurred...
-					doesASwappingEventStillOccur = true;
+	public int []sort(int []unsortedArray) throws SortingException{
+		try {
+			// Preparations of the result to return (the sorted array)
+			int []result = unsortedArray;
+			int dimension = unsortedArray.length;
+			
+			// The variable responsible for the determination of whether or not a permutation of element
+			// has still occurred, initialized with the value FALSE
+			boolean doesASwappingEventStillOccur = false;
+			// A particular variable necessary for the permutation of elements
+			int swappingEventTemporaryVar;
+			// Iterating over the Array which elements are to be sorted, and moving the "Bubble" element up 
+			// if one is found
+			do {
+				doesASwappingEventStillOccur = false;
+				for(int i = 1; i != dimension; ++i) {
+					if(result[i] < result[i - 1]) {
+						// the actual permutation
+						swappingEventTemporaryVar = result[i];
+						result[i] = result[i - 1];
+						result[i - 1] = swappingEventTemporaryVar;
+						// so, a permutation has actually occurred...
+						doesASwappingEventStillOccur = true;
+					}
 				}
-			}
-		}while (doesASwappingEventStillOccur);
-		return result;
+			}while (doesASwappingEventStillOccur);
+			return result;
+		}catch(Exception ex) {
+			// We let the dedicated class in charge of any Exception event
+			throw new SortingException(unsortedArray, ex.getMessage());
+		}
 	}
 }
