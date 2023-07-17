@@ -46,6 +46,7 @@ public class BubbleSort implements ISortingAlgorithm {
 					}
 				}
 			}while (doesASwappingEventStillOccur);
+			// the array is now sorted...
 			return result;
 		}catch(Exception ex) {
 			// We let the dedicated class in charge of any Exception event
