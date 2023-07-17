@@ -3,7 +3,7 @@ package exceptions;
 /**
  * 
  * @author Rindra Mbolamananamalala
- * The class dedicated to the implementation of the Exception, specific to the Sorting Algorithm proposed
+ * The class dedicated to the implementation of the Exception, specific to the Sorting Algorithms proposed
  * within this Project.
  */
 public class SortingException extends Exception{
