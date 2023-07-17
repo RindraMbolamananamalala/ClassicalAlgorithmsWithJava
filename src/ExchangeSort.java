@@ -27,34 +27,24 @@ public class ExchangeSort implements ISortingAlgorithm{
 			int arrayDimension = result.length;
 			// A particular variable necessary for the permutation of elements
 			int swappingEventTemporaryVar;
-						
+			
+			// The outer loop... 
 			for(int i = 0; i != arrayDimension - 1; ++ i) {
+				// The inner loop...
 				for(int j = i + 1; j != arrayDimension; ++ j) {
 					if(result[i] > result[j]) {
+						// A permutation is then needed...
 						swappingEventTemporaryVar = result[i];
 						result[i] = result[j];
 						result[j] = swappingEventTemporaryVar;
 					}
 				}
 			}
+			// the array is now sorted...
 			return result;
 		}catch (Exception ex) {
 			// We let the dedicated class in charge of any Exception event
 			throw new SortingException(unsortedArray, ex.getMessage());
 		}
-	}
-	
-	public static void main(String []args){
-		int []arrayTest = new int[] {45, 10, 2, 3, 344, 1};
-		try {
-			int []test = new ExchangeSort().sort(arrayTest);
-			for(int i:test) {
-				System.out.println(i);
-			}
-		} catch (SortingException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
 	}
 }
