@@ -43,7 +43,7 @@ public class ExchangeSort implements ISortingAlgorithm{
 			// the array is now sorted...
 			return result;
 		}catch (Exception ex) {
-			// We let the dedicated class in charge of any Exception event
+			// We delegate the responsibility to the dedicated class in charge of any Exception event
 			throw new SortingException(unsortedArray, ex.getMessage());
 		}
 	}
